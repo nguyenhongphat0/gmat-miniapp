@@ -14,9 +14,6 @@ export const login = () => new Promise<boolean>(resolve => {
 
 export const getAccessToken = async () => {
   let token = await api.getAccessToken();
-  if (token === 'DEFAULT ACCESS TOKEN') {
-    token = await getDeveloperAccessToken();
-  }
   return token;
 }
 
